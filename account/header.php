@@ -327,8 +327,8 @@
                                 </ul>
                             </div>
                             <div id="sbMainNavUserMenuListLogOutItem" class="sbMainNavUserMenuListItem">
-                                <a href="logout" style="color:red;" role="menuitem">
-                                    <span class="sbMainNavUserMenuItemText">Log Out
+                                <a href="logout" role="menuitem">
+                                    <span style="color:white;font-weight:800;border-radius:15px;background:red;padding:10px;" class="sbMainNavUserMenuItemText">Log Out
                                     </span>
                                 </a>
                             </div>
