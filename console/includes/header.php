@@ -2,7 +2,7 @@
       <div class="am-header-left">
        <a id="naviconLeft" href="" class="am-navicon d-none d-lg-flex"><i class="icon ion-navicon-round"></i></a>
         <a id="naviconLeftMobile" href="" class="am-navicon d-lg-none"><i class="icon ion-navicon-round"></i></a>
-        <a href="dashboard" class="am-logo">IQ24GLOBAL7FX</a>
+        <a href="dashboard" class="am-logo">EasymediaWealth</a>
       </div><!-- am-header-left -->
 
       <div class="am-header-right">
