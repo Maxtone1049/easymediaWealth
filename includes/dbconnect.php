@@ -2,7 +2,7 @@
 // DB credentials.
 define('DB_HOST','localhost');
 define('DB_USER','u469764316_easyuser');
-define('DB_PASS','Platform11@');
+define('DB_PASS','6/rLePOJqWNu');
 define('DB_NAME','u469764316__easynet');
 // Establish database connection.
 try
