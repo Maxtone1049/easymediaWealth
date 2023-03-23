@@ -1,9 +1,9 @@
 <?php 
 // DB credentials.
 define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','dbwork');
+define('DB_USER','u469764316_easyuser');
+define('DB_PASS','Platform11@');
+define('DB_NAME','u469764316__easynet');
 // Establish database connection.
 try
 {
