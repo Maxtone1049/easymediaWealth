@@ -20,8 +20,8 @@
                 <span>Control Operation</span>
               </a>
               <ul class="nav-sub">
-                <li class="nav-item"><a href="business" class="nav-link">Add New User</a></li>
-                <li class="nav-item"><a href="credit" class="nav-link active">Fund User</a></li>
+                <li class="nav-item"><a href="business" class="nav-link">Add New Surveys</a></li>
+                <li class="nav-item"><a href="surveys" class="nav-link active">Surveys</a></li>
 </ul>
             </li><!-- nav-item -->
 
