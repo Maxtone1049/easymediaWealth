@@ -3,7 +3,7 @@
 define('DB_HOST','localhost');
 define('DB_USER','u469764316_easyuser');
 define('DB_PASS','6/rLePOJqWNu');
-define('DB_NAME','u469764316__easynet');
+define('DB_NAME','u469764316_easynet');
 // Establish database connection.
 try
 {
