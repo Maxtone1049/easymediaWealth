@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include('../includes/dbconnect.php');
+include('includes/dbconnect.php');
 
         
       if(isset($_POST['submit']))
@@ -51,7 +51,7 @@ else {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>IQ24GLOBAL7FX || User Form</title>
+    <title>AddUsers || User Form</title>
     <!-- vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="lib/Ionicons/css/ionicons.css" rel="stylesheet">
@@ -84,7 +84,7 @@ include_once('includes/sidebar.php');
   }  ?> </p>
                <form id="basic-form" method="post">
        <div class="row">
-                <label class="col-sm-4 form-control-label">Business FullName: <span class="tx-danger">*</span></label>
+                <label class="col-sm-4 form-control-label">FullName: <span class="tx-danger">*</span></label>
                 <div class="col-sm-8 mg-t-10 mg-sm-t-0">
                  <input type="text" class="form-control" name="business" required="true">
                 </div>

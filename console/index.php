@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include('../includes/dbconnect.php');
+include('includes/dbconnect.php');
 
 if(isset($_POST['login'])) 
   {
@@ -45,7 +45,7 @@ echo "<script>alert('Invalid Details');</script>";
   <head>
    
 
-    <title>Iq24global7fx || Admin</title>
+    <title>EasymediaWealth || Admin</title>
 
     <!-- vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -62,7 +62,7 @@ echo "<script>alert('Invalid Details');</script>";
         <div class="row no-gutters">
           <div class="col-lg-5">
             <div>
-              <h2>IQ24GLOBAL7FX</h2>
+              <h2>EasymediaWealth</h2>
               <p>Welcome to Admin Panel</p>
               <p>UMS (User Management System)</p>
 
@@ -95,7 +95,7 @@ echo "<script>alert('Invalid Details');</script>";
           </div>
          </form>
         </div><!-- row -->
-        <p class="tx-center tx-white-5 tx-12 mg-t-15">2021 ©IQ24GLOBAL7FX. All right Reversed</p>
+        <p class="tx-center tx-white-5 tx-12 mg-t-15">2021 ©EasymediaWealth. All right Reversed</p>
       </div><!-- signin-box -->
     </div><!-- am-signin-wrapper -->
 

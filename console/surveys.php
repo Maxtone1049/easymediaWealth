@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include('../includes/dbconnect.php');
+include('includes/dbconnect.php');
 if (strlen($_SESSION['obcsaid']==0)) {
   header('location:logout');
   } else{
@@ -14,7 +14,7 @@ if (strlen($_SESSION['obcsaid']==0)) {
   <head>
    
 
-    <title> Business ||  IQ24GLOBAL7FX</title>
+    <title> Surveys ||  EasymediaWealth</title>
 
     <!-- vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">

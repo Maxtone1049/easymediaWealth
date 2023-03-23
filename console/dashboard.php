@@ -1,19 +1,16 @@
 <?php
 session_start();
 error_reporting(0);
-include('../includes/dbconnect.php');
+include('includes/dbconnect.php');
 if (strlen($_SESSION['obcsaid']==0)) {
   header('location:logout');
   } else{
-
-
-
-  ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
 
-    <title>ADMIN - IQ24GLOBAL7FX</title>
+    <title>ADMIN - EasymediaWealth</title>
 
     <!-- vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
