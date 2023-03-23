@@ -26,7 +26,7 @@
             </li><!-- nav-item -->
 
             <li class="nav-item">
-              <a href="logout.php" >
+              <a href="logout" >
                 <i class="icon ion-ios-gear-user"></i>
                 <span>Exit</span>
               </a>
