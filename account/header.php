@@ -328,9 +328,8 @@
                             </div>
                             <div id="sbMainNavUserMenuListLogOutItem" class="sbMainNavUserMenuListItem">
                                 <a href="logout" id="sbMainNavLogOutCta" class="sbCta" role="menuitem">
-                                    <span class="sbMainNavUserMenuItemText">Log Out
-                                    </span>
-                                </a>
+                                    Log Out
+                                    </a>
                             </div>
                         </div>
                         <div id="sbMainNavUserMenuSwagCode" hidden>
