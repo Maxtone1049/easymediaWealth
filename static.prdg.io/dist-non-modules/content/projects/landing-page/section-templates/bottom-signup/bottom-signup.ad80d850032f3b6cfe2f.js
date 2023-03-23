@@ -1,0 +1,1 @@
+!function(t){"use strict";t((function(){t(window);var e=sbPage.$content,n=(t("#stickySignUpCtaWrapper"),t("#sbRegFormWrapper")),o=t("#sbxJxRegEmail");t("#lpContentSignUp .sbCta").click((function(){e.animate({scrollTop:n.position().top},1e3),o.focus(),sbHelpers.trackData({eventCategory:"Marketing LP",eventAction:"CTA Click",eventLabel:"Bottom Sign Up Now"})}))}))}(jQuery);

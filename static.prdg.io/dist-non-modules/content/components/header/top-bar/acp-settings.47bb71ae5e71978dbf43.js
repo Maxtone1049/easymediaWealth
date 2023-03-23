@@ -1,0 +1,1 @@
+window.acpObj={acp_searchbox_id:"sbGlobalNavSearchInputWeb",acp_suggestions_container_id:"sbSearchMenuInnerWrapper",acp_suggestions:"3",acp_api:"https://completr-v2.appspot.com",acp_l:"en",acp_c:document.getElementById("acpSettingsScript")&&document.getElementById("acpSettingsScript").dataset.locationCode,acp_callback:function(a){topbarSearch.submit(a)}};

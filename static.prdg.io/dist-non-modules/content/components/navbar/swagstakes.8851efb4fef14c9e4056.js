@@ -1,0 +1,1 @@
+!function(){"use strict";var e=window.location.href.match(/\-?\d+/);if(e){var t=e[0],c=document.getElementById("cat-"+t);c&&(c.className+=" selected")}}();

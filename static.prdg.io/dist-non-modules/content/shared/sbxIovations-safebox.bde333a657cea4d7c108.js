@@ -1,0 +1,1 @@
+!function(){"use strict";var e=document.getElementById("ioBlackBox");null!=e&&e.remove(),(e=document.createElement("INPUT")).setAttribute("name","ioBlackBox"),e.setAttribute("id","ioBlackBox"),e.setAttribute("type","hidden"),document.head.appendChild(e)}();

@@ -1,0 +1,684 @@
+html {
+    font-family: Open Sans,sans-serif;
+    font-size: 62.5%!important
+}
+
+body {
+    font-size: inherit!important
+}
+
+.loginFormSection,.loginFormSection *,.loginFormSection :after,.loginFormSection :before {
+    box-sizing: border-box
+}
+
+.loginFormSection {
+    --INPUT_TEXT_COLOR: #757575;
+    --INPUT_BORDER_COLOR: #dadada;
+    --INPUT_FOCUS_COLOR: #555;
+    --ERROR_COLOR: #af1521;
+    --BOX_SHADOW_COLOR: #0000003d;
+    --SECTION_SIDE_INDENTATION: 1.6rem;
+    --TRANSITION_DURATION: .2s;
+    --TRANSITION_DELAY: .05s;
+    --TRANSITION_TIMING_FUNCTION: ease-in-out;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 .1rem var( --INPUT_BORDER_COLOR ),0 .2rem .3rem var( --BOX_SHADOW_COLOR );
+    overflow: hidden;
+    text-align: center;
+    width: 34.3rem
+}
+
+.loginHeaderWrapper {
+    filter: drop-shadow(var( 0 .1rem .2rem var( --BOX_SHADOW_COLOR ) ))
+}
+
+.loginHeader {
+    background: #61b5ca;
+    clip-path: url(#loginHeaderClip);
+    height: 9.2rem;
+    position: relative;
+    width: 100%;
+    z-index: 1
+}
+
+.loginHeader:before {
+    background: url('apple-touch-icon-180x180.48d1616875d9e641fc7a.png') 50% -9.6rem/34rem no-repeat;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: .15;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.loginHeaderContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1
+}
+
+.loginHomePageLink {
+    background: url('apple-touch-icon-180x180.48d1616875d9e641fc7a.png') 50%/contain no-repeat;
+    display: block;
+    height: 4rem;
+    margin-top: 1.4rem;
+    width: 17.8rem
+}
+
+.loginHeaderTitle {
+    color: #14404a;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.25
+}
+
+#socialConnectBlock {
+    align-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.6rem var( --SECTION_SIDE_INDENTATION ) 0
+}
+
+#socialConnectBlock .sbCta {
+    margin-top: .8rem
+}
+
+.loginMethodsSeparator {
+    height: 3.3rem;
+    margin: 0 var( --SECTION_SIDE_INDENTATION );
+    position: relative
+}
+
+.loginMethodsSeparator:before {
+    background-color: var( --INPUT_BORDER_COLOR );
+    content: "";
+    display: block;
+    height: .1rem;
+    left: 0;
+    position: absolute;
+    top: 1.6rem;
+    width: 100%
+}
+
+.loginMethodsSeparatorText {
+    background-color: #fff;
+    color: #aaa;
+    display: block;
+    font-size: 1.4em;
+    left: 50%;
+    padding: 0 1.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+
+#inputFieldsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    padding: .9rem var( --SECTION_SIDE_INDENTATION ) 0;
+    text-align: left;
+    transition: padding var( --TRANSITION_DURATION ) var( --TRANSITION_TIMING_FUNCTION )
+}
+
+.error#inputFieldsContainer {
+    background-color: #fde8ea80;
+    padding-bottom: 1.6rem
+}
+
+#loginErrorMessage {
+    color: var( --ERROR_COLOR );
+    font-size: 1.2em;
+    line-height: 1.25;
+    max-height: 0;
+    opacity: 0;
+    order: 4;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height var( --TRANSITION_DURATION ) var( --TRANSITION_TIMING_FUNCTION ),margin var( --TRANSITION_DURATION ) var( --TRANSITION_TIMING_FUNCTION ),padding var( --TRANSITION_DURATION ) var( --TRANSITION_TIMING_FUNCTION ),opacity 0s var( --TRANSITION_TIMING_FUNCTION )
+}
+
+.error#inputFieldsContainer #loginErrorMessage {
+    margin-bottom: -.7rem;
+    max-height: 4.2rem;
+    opacity: 1;
+    padding: .6rem 0;
+    transition-delay: 0s,0s,0s,var( --TRANSITION_DELAY );
+    transition-duration: var( --TRANSITION_DURATION ),var( --TRANSITION_DURATION ),var( --TRANSITION_DURATION ),calc(var( --TRANSITION_DURATION ) - var( --TRANSITION_DELAY ))
+}
+
+.emptyEmail:not(.emptyPassword)#inputFieldsContainer #loginErrorMessage {
+    margin-bottom: 0;
+    order: 2
+}
+
+.inputFieldWrapper {
+    align-items: stretch;
+    background-color: #fff;
+    border: .1rem solid var( --INPUT_BORDER_COLOR );
+    border-radius: .4rem;
+    display: flex;
+    margin-top: .8rem;
+    padding: .2rem;
+    position: relative
+}
+
+.emailInputWrapper {
+    order: 1
+}
+
+.passwordInputWrapper {
+    order: 3
+}
+
+.inputFieldWrapper:focus-within {
+    border-color: var( --INPUT_TEXT_COLOR )
+}
+
+.error.emptyEmail.emptyPassword#inputFieldsContainer .inputFieldWrapper,.error:not(.emptyEmail)#inputFieldsContainer .passwordInputWrapper,.error:not(.emptyPassword)#inputFieldsContainer .emailInputWrapper {
+    border-color: var( --ERROR_COLOR )
+}
+
+.inputField {
+    background-color: initial;
+    border: none;
+    color: var( --INPUT_TEXT_COLOR );
+    display: block;
+    flex-grow: 1;
+    font-size: 1.6em;
+    line-height: 1.5;
+    padding: .9rem 1rem;
+    width: 100%
+}
+
+.inputField::placeholder {
+    color: #0000;
+    user-select: none
+}
+
+.inputField:focus {
+    color: var( --INPUT_FOCUS_COLOR );
+    outline: 0
+}
+
+.inputField:-webkit-autofill,.inputField:-webkit-autofill:focus,.inputField:-webkit-autofill:hover {
+    -webkit-text-fill-color: var( --INPUT_TEXT_COLOR );
+    box-shadow: inset 0 0 0 20rem #fff
+}
+
+.inputField:-webkit-autofill:focus {
+    -webkit-text-fill-color: var( --INPUT_FOCUS_COLOR )
+}
+
+.error#inputFieldsContainer .inputField:not(.inputFieldNotEmpty):-webkit-autofill {
+    -webkit-text-fill-color: #0000
+}
+
+.error.emptyEmail.emptyPassword#inputFieldsContainer .inputField:not(.inputFieldNotEmpty),.error:not(.emptyEmail)#inputFieldsContainer .passwordInputWrapper .inputField:not(.inputFieldNotEmpty),.error:not(.emptyPassword)#inputFieldsContainer .emailInputWrapper .inputField:not(.inputFieldNotEmpty) {
+    color: var( --ERROR_COLOR )
+}
+
+.error:not(.emptyEmail):not(.emptyPassword)#inputFieldsContainer .inputField:not(.inputFieldNotEmpty) {
+    color: #0000
+}
+
+.inputPlaceholder {
+    background-color: #fff;
+    color: var( --INPUT_TEXT_COLOR );
+    display: inline-block;
+    font-size: 1.4em;
+    left: .7rem;
+    line-height: 1;
+    padding: 0 .6rem;
+    pointer-events: none;
+    position: absolute;
+    top: 1.7rem;
+    transition: transform .15s cubic-bezier(.4,0,.2,1)
+}
+
+#inputFieldsContainer:not(.error) .inputField:-webkit-autofill~.inputPlaceholder,#inputFieldsContainer:not(.error) .inputField:not(:placeholder-shown)~.inputPlaceholder,.inputField.inputFieldNotEmpty~.inputPlaceholder,.inputField:not([disabled]):focus~.inputPlaceholder {
+    transform: translate(.7rem,-2.5rem)
+}
+
+.error#inputFieldsContainer .inputPlaceholder {
+    background: linear-gradient(180deg,#fff0 50%,#fff 0)
+}
+
+.error.emptyEmail.emptyPassword#inputFieldsContainer .inputPlaceholder,.error:not(.emptyEmail)#inputFieldsContainer .passwordInputWrapper .inputPlaceholder,.error:not(.emptyPassword)#inputFieldsContainer .emailInputWrapper .inputPlaceholder {
+    color: var( --ERROR_COLOR )
+}
+
+#togglePasswordVisibilityCta {
+    flex-shrink: 0;
+    margin-right: .3rem
+}
+
+.loginFormActions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 1.5;
+    padding: 0 var( --SECTION_SIDE_INDENTATION )
+}
+
+.rememberMeCheckbox {
+    position: relative
+}
+
+#signUpRememberMe {
+    opacity: 0;
+    position: absolute
+}
+
+.forgotPasswordButton,.rememberMeLabel {
+    background-color: initial;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+    transition: all .15s ease-out
+}
+
+.forgotPasswordButton:focus,.rememberMeLabel:focus {
+    outline: .1rem auto #2388af
+}
+
+.forgotPasswordButton,.rememberMeLabel {
+    color: #15768d;
+    display: block;
+    font-size: 1.2em;
+    padding: 0;
+    transition: none
+}
+
+.rememberMeLabel {
+    padding-left: 2.6rem;
+    position: relative
+}
+
+.forgotPasswordButton:hover,.rememberMeLabel:hover {
+    color: #156477
+}
+
+#signUpRememberMe:focus~.rememberMeLabel {
+    outline: .1rem auto #2388af
+}
+
+.rememberMeLabel:after,.rememberMeLabel:before {
+    content: "";
+    display: block;
+    position: absolute
+}
+
+.rememberMeLabel:before {
+    background-color: #fff;
+    border: .1rem solid #15768d;
+    border-radius: .2rem;
+    height: 1.8rem;
+    left: 0;
+    top: 0;
+    width: 1.8rem
+}
+
+#signUpRememberMe:checked~.rememberMeLabel:before {
+    background-color: #15768d
+}
+
+#signUpRememberMe~.rememberMeLabel:hover:before {
+    background-color: #fff;
+    border-color: #156477
+}
+
+#signUpRememberMe:checked~.rememberMeLabel:hover:before {
+    background-color: #156477
+}
+
+.rememberMeLabel:after {
+    border-bottom: .2rem solid #fff;
+    border-right: .2rem solid #fff;
+    height: 1.3rem;
+    left: .5rem;
+    opacity: 0;
+    top: .1rem;
+    transform: rotate(45deg);
+    width: .7rem
+}
+
+#signUpRememberMe:checked~.rememberMeLabel:after {
+    opacity: 1
+}
+
+.reaffirmationContainer {
+    color: var( --INPUT_TEXT_COLOR );
+    margin: 0 auto;
+    padding: 1.1rem 0 .9rem;
+    width: 23.1rem
+}
+
+.agreementLink {
+    color: #15768d;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.agreementLink:hover {
+    color: #156477;
+    text-decoration: none
+}
+
+.loginSubmitButton {
+    background-color: initial;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+    transition: all .15s ease-out
+}
+
+.loginSubmitButton:focus {
+    outline: .1rem auto #2388af
+}
+
+.loginSubmitButton {
+    background-color: #15768d;
+    color: #fff
+}
+
+.loginSubmitButton[disabled=disabled],.loginSubmitButton[disabled] {
+    background-color: #888!important;
+    pointer-events: none
+}
+
+.loginSubmitButton {
+    border-radius: .4rem;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: .6rem;
+    padding: 1.4rem;
+    width: 100%
+}
+
+.loginSubmitButton:hover {
+    background-color: #156477
+}
+
+.loginSubmitButton.disabled {
+    opacity: .7;
+    pointer-events: none
+}
+
+.signUpLink {
+    color: var( --INPUT_TEXT_COLOR );
+    display: inline-block;
+    font-size: 1.4em;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    padding: .8rem 0;
+    text-decoration: none
+}
+
+.signUpLinkHighlighted {
+    color: #15768d;
+    font-weight: 700
+}
+
+.signUpLink:hover .signUpLinkHighlighted {
+    color: #156477
+}
+
+::-ms-reveal {
+    display: none
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+.sbCta {
+    background-color: initial;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+    transition: all .15s ease-out
+}
+
+.sbCta:focus {
+    outline: .1rem auto #2388af
+}
+
+.sbCta.disabled {
+    cursor: default;
+    opacity: .7
+}
+
+#lpContentWrap {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 5rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1
+}
+
+#lpContentPromoArea {
+    box-sizing: border-box;
+    display: block;
+    max-width: 64rem;
+    order: 2;
+    padding: 4rem 2rem
+}
+
+#lpContentPromoAreaHeader {
+    color: #fff;
+    font-size: 3.8em;
+    font-weight: 400;
+    margin: 0 auto 3rem;
+    max-width: 47rem
+}
+
+#lpContentPromoAreaCopy {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 5rem
+}
+
+.loginFormWrapper {
+    display: inline-block;
+    margin: 3.2rem -2rem 0;
+    max-width: 34.3rem;
+    position: relative;
+    vertical-align: middle
+}
+
+#lpContentPromoAreaCta,.lpContentPromoAreaCta {
+    background-color: #69b8d6;
+    border-radius: .4rem;
+    color: #fff;
+    display: inline-block;
+    font-size: 3em;
+    margin: 0 auto;
+    padding: 1.5rem 3.5rem
+}
+
+#lpContentPromoSwagButton,#lpContentPromoSwagButtonAlt {
+    display: none
+}
+
+#bottomSec {
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 6rem;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.disclaimerCopy {
+    --fontSize: 1em;
+    --lineHeight: 1.2;
+    display: none;
+    font-size: var( --fontSize );
+    line-height: var( --lineHeight );
+    margin: 1rem auto 0;
+    max-height: calc(var( --fontSize )*var( --lineHeight )*2);
+    width: calc(100% - 8rem)
+}
+
+.showDisclaimer .disclaimerCopy {
+    display: block
+}
+
+.divErLandingPage {
+    background-color: #ed1b24;
+    border-radius: .4rem;
+    color: #fff;
+    display: none;
+    font-size: 1.4em;
+    font-weight: 700;
+    left: 0;
+    padding: 1rem;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: -1.6rem
+}
+
+.divErLandingPage a,.divErLandingPage button {
+    background-color: initial;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+    transition: all .15s ease-out
+}
+
+.divErLandingPage a:focus,.divErLandingPage button:focus {
+    outline: .1rem auto #2388af
+}
+
+.divErLandingPage a,.divErLandingPage button {
+    color: #00e;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0
+}
+
+.grecaptcha-badge {
+    z-index: 1
+}
+
+@media (max-width: 47.9375em) {
+    #sbFooterSeparator {
+        background-color:#ccc;
+        height: 3rem
+    }
+
+    .lpLogin #sbBoilerplateContainer,.lpLogin #sbFooterContainer,.lpLogin #sbFooterWrap {
+        background-color: #f9f9f9;
+        min-width: 0
+    }
+
+    .lpLogin #sbFooterContainer {
+        padding: 0
+    }
+
+    .lpLogin #sbBoilerplateContainer {
+        box-sizing: border-box
+    }
+
+    .lpLogin #sbBoilerplate #sbBPText p {
+        color: #666;
+        font-size: 1.3em;
+        font-weight: 400;
+        line-height: 1.69
+    }
+
+    .lpLogin #howOurMembers li {
+        font-size: 1.4em;
+        line-height: 1.21;
+        padding-bottom: 3rem
+    }
+}
+
+@media (min-width: 64em) {
+    #lpContentWrap {
+        flex-direction:row;
+        height: 100vh;
+        justify-content: center;
+        min-height: 74rem;
+        padding-bottom: 0
+    }
+
+    #lpContentPromoArea {
+        margin-right: 2rem;
+        order: 0;
+        padding: 0;
+        width: 62rem
+    }
+
+    .loginFormWrapper {
+        margin: 0
+    }
+
+    .divErLandingPage {
+        position: absolute;
+        transform: translateY(-100%)
+    }
+}
+
+.styles__togglePasswordVisibilityCta--wFNNJ {
+    background-color: initial;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+    transition: all .15s ease-out
+}
+
+.styles__togglePasswordVisibilityCta--wFNNJ:focus {
+    outline: .1rem auto #2388af
+}
+
+.styles__togglePasswordVisibilityCta--wFNNJ {
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    width: 4.4rem
+}
+
+.styles__togglePasswordVisibilityCta--wFNNJ:focus {
+    outline: none
+}
+
+.styles__togglePasswordVisibilityCta--wFNNJ:hover {
+    background-color: inherit
+}
+
+.styles__togglePasswordVisibilityCta--wFNNJ:before {
+    background: url(sprite.5bd98fcbfe078eec17fa.svg) no-repeat;
+    content: "";
+    height: 1.4rem;
+    width: 1.8rem
+}
+
+[data-password-shown=true]~.styles__togglePasswordVisibilityCta--wFNNJ:before {
+    background-position: 0 -1.5rem
+}

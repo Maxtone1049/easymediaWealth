@@ -1,0 +1,2 @@
+/*! For license information please see parseHTML.7a5f1ec1dc48d8579471.js.LICENSE.txt */
+!function(){var e;if("undefined"!=typeof jQuery&&!jQuery.parseHTML)e=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,jQuery.parseHTML=function(r,n,u){if(!r||"string"!=typeof r)return null;"boolean"==typeof n&&(u=n,n=!1),n=n||document;var t=e.exec(r),o=!u&&[];return t?[n.createElement(t[1])]:(t=jQuery.buildFragment([r],[n],o),o&&o.length&&jQuery(o).remove(),jQuery.merge([],t.fragment.childNodes))},jQuery.parseHTML}();

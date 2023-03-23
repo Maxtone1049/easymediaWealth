@@ -1,0 +1,1 @@
+!function(e){"use strict";var t=document.getElementById("sbShopSort");t&&t.addEventListener("change",(function(){window.location.search=this.value}));var n=e(".sbRewardsCard").find(".sbTrayListItemHeaderCaption");n.length&&sbHelpers.truncate(n)}(jQuery);

@@ -1,0 +1,1 @@
+!function(){"use strict";var e,t,n,c,i,o=document.currentScript.getAttribute("data-fb-app-id");window.fbAsyncInit=function(){FB.init({appId:o,cookie:!0,xfbml:!0,version:"v2.5"})},e=document,t="script",n="facebook-jssdk",i=e.getElementsByTagName(t)[0],e.getElementById(n)||((c=e.createElement(t)).id=n,c.src="../connect.facebook.net/en_US/sdk.js",i.parentNode.insertBefore(c,i))}();

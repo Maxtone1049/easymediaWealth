@@ -1,0 +1,1 @@
+(()=>{"use strict";function t(t,e){const n=document.getElementById("sbContent");n&&t&&(n.addEventListener("scroll",(()=>function(t,e,n){e.toggleAttribute("hidden",Boolean(t.scrollTop<document.documentElement.clientHeight*n))}(n,t,e))),t.addEventListener("click",(()=>function(t){t.scrollTo(0,0)}(n))))}t(document.getElementById("scrollToTop"),1)})();

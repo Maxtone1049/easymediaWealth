@@ -1,0 +1,1 @@
+$((function(){"use strict";var e=$(".sbTrayListItemHeaderCaption");e.truncate({lines:2,lineHeight:parseInt(e.css("line-height")),ellipsis:"..."})}));
